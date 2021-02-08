@@ -1,0 +1,27 @@
+= scms-github-action
+
+Checks a repository for scms compatibility
+
+== Inputs
+
+=== `parallelity`
+
+Set parallelity.
+The default is `"1"` which is single threaded.
+Note that parallelity will fail-at-end and result in unordered log outputs.
+
+
+== Outputs
+
+None yet.
+
+== Example usage
+
+[source,yaml]
+----
+steps:
+- name: check with scms
+  uses: scms/scms-github-action@v1
+  with:
+    parallelity: 'T1C'
+----

@@ -1,0 +1,22 @@
+name: 'scms check'
+
+description: 'Checks if the repository can be used with scms'
+
+inputs:
+  parallelity:
+    description: 'Parallelity. Default is 1 (process dirs and files sequentially).'
+    required: false
+    default: '1'
+  verbose:
+    description: 'Verbose output from renderers.'
+    required: false
+    default: 'false'
+
+outputs: { }
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.parallelity }}
+    - ${{ inputs.verbose }}
