@@ -12,10 +12,7 @@ RUN     mkdir -p /opt \
         && cd /opt \
         && unzip /opt/scms-0.4.0.zip \
         && mv /opt/scms-0.4.0 /opt/scms \
-        && chmod ugo+x /opt/scms/bin/scms /entrypoint.sh /populate_scc.sh \
-        && chown 1001:1001 -R /tmp/sccinput /tmp/sccoutput
-
-USER 1001
+        && chmod u+x /opt/scms/bin/scms /entrypoint.sh /populate_scc.sh
 
 RUN     /populate_scc.sh \
         && rm -rf /tmp/sccinput /tmp/sccoutput
