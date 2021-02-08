@@ -10,6 +10,15 @@ Set parallelity.
 The default is `"1"` which is single threaded.
 Note that parallelity will fail-at-end and result in unordered log outputs.
 
+Note: this parameter loosely follows the maven syntax. Use `1C` for one thread per core,
+use `12` for exactly 12 threads and `0.9C` for rounded 0.9 threads per core.
+
+=== `verbose`
+
+Sets the verbosity.
+The default is `INFO` for scms classes and `WARN` for 3rd-party libraries.
+Use `true` for verbose output (`DEBUG` for all messages).
+
 
 == Outputs
 
@@ -23,5 +32,6 @@ steps:
 - name: check with scms
   uses: scms/scms-github-action@v1
   with:
-    parallelity: 'T1C'
+    parallelity: 1C
+    verbose: true
 ----
