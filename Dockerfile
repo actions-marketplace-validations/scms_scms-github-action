@@ -3,7 +3,7 @@ FROM adoptopenjdk/openjdk15-openj9:alpine-slim
 
 RUN     mkdir -p /opt \
         && mkdir -p /tmp/scms-output \
-        && wget "https://maven.pkg.github.com/scms/scms/com/leshazlewood/scms/scms/0.4.0-SNAPSHOT/scms-0.4.0.zip" -O /opt/scms-0.4.0-SNAPSHOT.zip \
+        && wget "https://github.com/scms/scms/releases/download/v0.4.0/scms-0.4.0.zip" -O /opt/scms-0.4.0-SNAPSHOT.zip \
         && cd /opt \
         && unzip /opt/scms-0.4.0-SNAPSHOT.zip \
         && mv /opt/scms-0.4.0-SNAPSHOT /opt/scms \
