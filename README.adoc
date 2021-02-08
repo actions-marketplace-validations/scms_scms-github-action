@@ -19,6 +19,11 @@ Sets the verbosity.
 The default is `INFO` for scms classes and `WARN` for 3rd-party libraries.
 Use `true` for verbose output (`DEBUG` for all messages).
 
+=== `inputpath`
+
+Set the input path relative to the repository.
+Please note that absolute paths and paths containing `/..` or `../` will be rejected.
+
 
 == Outputs
 
@@ -34,4 +39,5 @@ steps:
   with:
     parallelity: 1C
     verbose: true
+    inputpath: site
 ----

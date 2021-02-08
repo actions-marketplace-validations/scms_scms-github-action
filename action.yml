@@ -6,11 +6,13 @@ inputs:
   parallelity:
     description: 'Parallelity. Default is 1 (process dirs and files sequentially).'
     required: false
-    default: '1'
   verbose:
-    description: 'Verbose output from renderers.'
+    description: 'Verbose output from renderers. Set to "true" for more verbose output'
     required: false
     default: 'false'
+  inputpath:
+    description: 'Path within repository to the source files'
+    required: false
 
 outputs: { }
 
