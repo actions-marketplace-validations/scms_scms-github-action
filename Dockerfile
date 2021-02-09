@@ -6,7 +6,7 @@ COPY entrypoint.sh /entrypoint.sh
 COPY populate_scc.sh /populate_scc.sh
 COPY sccinput /tmp/sccinput
 
-RUN     apt update && apt -y --no-install-recommends install wget unzip \
+RUN     apt update && apt -y --no-install-recommends install wget unzip git \
         && mkdir -p /opt \
         && mkdir -p /tmp/sccoutput \
         && wget -q "https://github.com/scms/scms/releases/download/v0.4.0/scms-0.4.0.zip" -O /opt/scms-0.4.0.zip \

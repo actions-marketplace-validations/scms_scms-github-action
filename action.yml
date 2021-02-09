@@ -13,12 +13,20 @@ inputs:
   inputpath:
     description: 'Path within repository to the source files'
     required: false
+  outputbranch:
+    description: 'Output the results to a branch in your repository. If not set, only checks will be performed (default).'
+    required: false
+  emptycommit:
+    description: 'Do an empty commit if the newly generated output is not different from the previous output?'
+    required: false
+  wipeoutputbranch:
+    description: 'Wipe output branch using `git rm -rf` before checking in new files? Warning: history will be lost!'
+    required: false
+    default: 'false'
 
 outputs: { }
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.parallelity }}
-    - ${{ inputs.verbose }}
+  args: []
