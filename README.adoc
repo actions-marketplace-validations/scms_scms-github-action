@@ -24,6 +24,25 @@ Use `true` for verbose output (`DEBUG` for all messages).
 Set the input path relative to the repository.
 Please note that absolute paths and paths containing `/..` or `../` will be rejected.
 
+=== `outputbranch`
+
+If set, the results will be pushed to the specified output branch.
+
+=== `emptycommit`
+
+If set to `true`, the result will be committed even if the output has not changed since the previous commit.
+
+Only effective when `outputbranch` is set.
+
+=== `wipeoutputbranch`
+
+*NOT IMPLEMENTED*
+
+If set, wipes the output branch before checking in.
+This will disable any diffs.
+
+Only effective when `outputbranch` is set.
+
 
 == Outputs
 
@@ -40,4 +59,7 @@ steps:
     parallelity: 1C
     verbose: true
     inputpath: site
+    outputbranch: site-staging
+    wipeoutputbranch: false # default
+    emptycommit: true
 ----
