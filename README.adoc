@@ -1,6 +1,8 @@
 = scms-github-action
 
-Checks a repository for scms compatibility
+Checks a repository for scms compatibility.
+
+Can commit into a branch of your repository, using your `username <username@users.noreply.github.com>` as committer id.
 
 == Inputs
 
@@ -63,3 +65,12 @@ steps:
     wipeoutputbranch: false # default
     emptycommit: true
 ----
+
+== Example repository
+
+See https://github.com/scms/scms-example[scms/scms-example].
+
+It has two actions:
+
+. a non-committing action
+. a committing action, which commits into the https://github.com/scms/scms-example/tree/site-staging[site-staging] tree
