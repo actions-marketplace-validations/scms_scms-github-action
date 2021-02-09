@@ -2,6 +2,10 @@ name: 'scms check'
 
 description: 'Checks if the repository can be used with scms'
 
+branding:
+  icon: 'file-text'
+  color: 'blue'
+
 inputs:
   parallelity:
     description: 'Parallelity. Default is 1 (process dirs and files sequentially).'
